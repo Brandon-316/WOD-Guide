@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WODGuideSplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-zu-yu2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WODGuideLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cqU-X2-loi">
+                                <rect key="frame" x="43" y="258" width="328" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cqU-X2-loi" secondAttribute="height" multiplier="226:153" constant="3.0326797385620807" id="nv3-AU-NW5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cqU-X2-loi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="74" id="65y-fQ-1ut"/>
+                            <constraint firstItem="cqU-X2-loi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="136" id="9pe-5r-qYb"/>
+                            <constraint firstItem="Qj4-zu-yu2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DKi-GK-PIc"/>
+                            <constraint firstAttribute="trailing" secondItem="cqU-X2-loi" secondAttribute="trailing" constant="43" id="Dbk-Rx-SM5"/>
+                            <constraint firstItem="Qj4-zu-yu2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="EBh-UU-LdU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Qj4-zu-yu2" secondAttribute="bottom" id="GHM-5F-Cva"/>
+                            <constraint firstAttribute="trailing" secondItem="cqU-X2-loi" secondAttribute="trailing" constant="74" id="OhV-aA-5ic"/>
+                            <constraint firstItem="cqU-X2-loi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QDg-tk-IE4"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cqU-X2-loi" secondAttribute="bottom" constant="138" id="TTL-Uu-HOC"/>
+                            <constraint firstItem="cqU-X2-loi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WpC-cK-eJK"/>
+                            <constraint firstItem="cqU-X2-loi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="43" id="arj-3z-nvy"/>
+                            <constraint firstAttribute="trailing" secondItem="Qj4-zu-yu2" secondAttribute="trailing" id="hUh-TP-UDh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="65y-fQ-1ut"/>
+                                <exclude reference="9pe-5r-qYb"/>
+                                <exclude reference="OhV-aA-5ic"/>
+                                <exclude reference="TTL-Uu-HOC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WODGuideLogo.png" width="452" height="306"/>
+        <image name="WODGuideSplash.jpg" width="767" height="1151"/>
+    </resources>
+</document>
