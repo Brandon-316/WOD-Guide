@@ -196,8 +196,8 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ajQ-UW-xka" firstAttribute="top" secondItem="fcU-ho-JqL" secondAttribute="top" id="No0-Sn-Unc"/>
-                                    <constraint firstAttribute="bottom" secondItem="ajQ-UW-xka" secondAttribute="bottom" id="e0e-bm-XWQ"/>
+                                    <constraint firstItem="ajQ-UW-xka" firstAttribute="top" secondItem="fcU-ho-JqL" secondAttribute="top" constant="-64" id="GfF-KA-Kku"/>
+                                    <constraint firstAttribute="bottom" secondItem="ajQ-UW-xka" secondAttribute="bottom" constant="-68.5" id="e0e-bm-XWQ"/>
                                     <constraint firstItem="ajQ-UW-xka" firstAttribute="leading" secondItem="fcU-ho-JqL" secondAttribute="leading" id="fa3-n2-SmN"/>
                                     <constraint firstAttribute="trailing" secondItem="ajQ-UW-xka" secondAttribute="trailing" id="rkM-uc-87h"/>
                                 </constraints>
@@ -235,7 +235,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="heroImage" destination="9t9-u5-A1b" id="r1l-6c-RS0"/>
+                        <outlet property="heroImage" destination="9t9-u5-A1b" id="BDN-e9-dhg"/>
                         <outlet property="wodAbout" destination="kte-Lh-UH0" id="amO-Yp-3vP"/>
                         <outlet property="wodDescription" destination="NxH-6m-OyF" id="jUr-FZ-UdK"/>
                         <outlet property="wodExercises" destination="cC9-99-nZV" id="dM5-Dg-5cY"/>
