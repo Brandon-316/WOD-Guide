@@ -25,8 +25,8 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     @IBOutlet weak var checkSnatchBtn: UIButton!
     @IBOutlet weak var checkRunBtn: UIButton!
     @IBOutlet weak var checkKettlebell: UIButton!
-    @IBOutlet weak var checkRopeBtn: UIButton!
-    @IBOutlet weak var checkJRopeBtn: UIButton!
+    @IBOutlet weak var checkPushUpBtn: UIButton!
+    @IBOutlet weak var checkPullUpBtn: UIButton!
     @IBOutlet weak var checkRowBtn: UIButton!
     @IBOutlet weak var checkBikeBtn: UIButton!
     @IBOutlet weak var checkDeadliftBtn: UIButton!
@@ -126,7 +126,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     //Filter By Exercise//
     func checkExercises() {
         let checkedBox = UIImage(named: "CheckedBox.png")
-        let exercises = [checkSquatBtn, checkRowBtn, checkRunBtn, checkBikeBtn, checkCleanBtn, checkSnatchBtn, checkKettlebell, checkRopeBtn, checkDeadliftBtn, checkJRopeBtn]
+        let exercises = [checkSquatBtn, checkRowBtn, checkRunBtn, checkBikeBtn, checkCleanBtn, checkSnatchBtn, checkKettlebell, checkPullUpBtn, checkDeadliftBtn, checkPushUpBtn]
         
         for exercise in exercises {
             if exercise?.currentImage == checkedBox {
@@ -144,8 +144,8 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
         case _ where exerciseBtn == checkSnatchBtn: searchString = "snatch"
         case _ where exerciseBtn == checkRunBtn: searchString = "run"
         case _ where exerciseBtn == checkKettlebell: searchString = "kettlebell"
-        case _ where exerciseBtn == checkRopeBtn: searchString = "rope climb"
-        case _ where exerciseBtn == checkJRopeBtn: searchString = "double unders"
+        case _ where exerciseBtn == checkPullUpBtn: searchString = "pull-up"
+        case _ where exerciseBtn == checkPushUpBtn: searchString = "push-up"
         case _ where exerciseBtn == checkRowBtn: searchString = "row"
         case _ where exerciseBtn == checkBikeBtn: searchString = "bike"
         case _ where exerciseBtn == checkDeadliftBtn: searchString = "deadlift"
@@ -169,6 +169,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
         Keyword = searchController.searchBar.text!
         self.filterByScope()
+        self.checkExercises()
         self.filterByName()
         self.tableView.reloadData()
     }

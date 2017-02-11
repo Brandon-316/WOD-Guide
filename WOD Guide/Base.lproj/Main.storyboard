@@ -490,9 +490,9 @@
                         <outlet property="checkBikeBtn" destination="VKF-h0-GPw" id="zku-x5-bJ8"/>
                         <outlet property="checkCleanBtn" destination="QrK-Q6-lRX" id="0pL-mJ-g5g"/>
                         <outlet property="checkDeadliftBtn" destination="vHe-CI-sri" id="7nJ-XK-OVr"/>
-                        <outlet property="checkJRopeBtn" destination="Nvd-lm-cvh" id="G5X-5Q-mdz"/>
                         <outlet property="checkKettlebell" destination="7JX-nu-PTo" id="03a-MH-w6d"/>
-                        <outlet property="checkRopeBtn" destination="5Ka-92-LaZ" id="Ffb-i8-5fU"/>
+                        <outlet property="checkPullUpBtn" destination="5Ka-92-LaZ" id="ZgQ-iZ-gcs"/>
+                        <outlet property="checkPushUpBtn" destination="Nvd-lm-cvh" id="V4U-q5-VnS"/>
                         <outlet property="checkRowBtn" destination="VJQ-7D-0aU" id="KNo-Z5-yUc"/>
                         <outlet property="checkRunBtn" destination="HQ3-S4-bmj" id="dT5-uT-tB3"/>
                         <outlet property="checkSnatchBtn" destination="Fbj-1C-jMK" id="fsv-YW-JGN"/>
@@ -599,8 +599,8 @@
                                 <action selector="checkMark:" destination="uas-kX-C5e" eventType="touchUpInside" id="H5r-dL-VA8"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0H-Nl-ksw">
-                            <rect key="frame" x="211" y="21" width="40" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pull Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0H-Nl-ksw">
+                            <rect key="frame" x="211" y="21" width="55" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -614,8 +614,8 @@
                                 <action selector="checkMark:" destination="uas-kX-C5e" eventType="touchUpInside" id="J7y-I1-gBD"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jump Rope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rX-Fz-l07">
-                            <rect key="frame" x="211" y="61" width="87" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rX-Fz-l07">
+                            <rect key="frame" x="211" y="61" width="65" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
