@@ -16,10 +16,43 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
     var Keyword = ""
     var searchController : UISearchController?
     
+    var heightOfHeader = 25
+    
+    //PopUpView//
+    @IBOutlet var popUpView: UIView!
+    @IBOutlet weak var checkSquatBtn: UIButton!
+    @IBOutlet weak var checkCleanBtn: UIButton!
+    @IBOutlet weak var checkSnatchBtn: UIButton!
+    @IBOutlet weak var checkRunBtn: UIButton!
+    @IBOutlet weak var checkKettlebell: UIButton!
+    @IBOutlet weak var checkRopeBtn: UIButton!
+    @IBOutlet weak var checkJRopeBtn: UIButton!
+    @IBOutlet weak var checkRowBtn: UIButton!
+    @IBOutlet weak var checkBikeBtn: UIButton!
+    @IBOutlet weak var checkDeadliftBtn: UIButton!
+    
+    @IBAction func checkMark(_ btn: UIButton) {
+        let uncheckedBox = UIImage(named: "UncheckedBox.png")
+        let checkedBox = UIImage(named: "CheckedBox.png")
+        
+        if btn.currentImage != checkedBox {
+            btn.setImage(checkedBox, for: .normal)
+        }else{
+            btn.setImage(uncheckedBox, for: .normal)
+        }
+        setFilteredWodList()
+        filterByScope()
+        self.tableView.reloadData()
+        checkExercises()
+    }
+    
     @IBAction func backButton(sender: AnyObject) {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func doneWtPopUpBtn(_ sender: Any) {
+        removePopUpView()
+    }
     
     
     override func viewDidLoad() {
@@ -30,15 +63,11 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
             wodList.append(wod)
         }
         
-//        var headerView:UIView = UIView(frame: CGRectMake(0, 0, view.size.width, tableView.size.wid))
+
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.backgroundColor = UIColor.green
         button.setTitle("Test Button", for: .normal)
-//        button.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
-//        headerView.addSubview(button)
-//        self.view.addSubview(button)
 
-        
         // Search Bar
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.searchBar.autocapitalizationType = .none
@@ -55,21 +84,18 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
         searchController?.searchBar.delegate = self
         searchController?.searchBar.tintColor = UIColor.black
         
-//        searchController?.searchBar.showsSearchResultsButton = true
-//        http://stackoverflow.com/questions/20791577/adding-uibutton-to-uitableview-section-header
-
         self.filterByScope()
         
-//        if searchController?.active == true {
-//            
-//        }
+        setFilteredWodList()
         
-        
-
     }
     
 
 
+//Set FilteredWodList//
+    func setFilteredWodList() {
+        self.FilteredWodList = self.wodList
+    }
     
     func filterByScope(){
         let scope = searchController!.searchBar.scopeButtonTitles![searchController!.searchBar.selectedScopeButtonIndex]
@@ -99,11 +125,54 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
         })
     }
     
+
+    //Filter By Exercise//
+    func checkExercises() {
+        let checkedBox = UIImage(named: "CheckedBox.png")
+        let exercises = [checkSquatBtn, checkRowBtn, checkRunBtn, checkBikeBtn, checkCleanBtn, checkSnatchBtn, checkKettlebell, checkRopeBtn, checkDeadliftBtn, checkJRopeBtn]
+        
+        for exercise in exercises {
+            if exercise?.currentImage == checkedBox {
+                filterExercise(exerciseBtn: exercise!)
+                }
+            }
+    }
+    
+    func filterExercise(exerciseBtn: UIButton) {
+        var searchString = ""
+        
+        switch exerciseBtn {
+        case _ where exerciseBtn == checkSquatBtn: searchString = "squat"
+        case _ where exerciseBtn == checkCleanBtn: searchString = "clean"
+        case _ where exerciseBtn == checkSnatchBtn: searchString = "snatch"
+        case _ where exerciseBtn == checkRunBtn: searchString = "run"
+        case _ where exerciseBtn == checkKettlebell: searchString = "kettlebell"
+        case _ where exerciseBtn == checkRopeBtn: searchString = "rope climb"
+        case _ where exerciseBtn == checkJRopeBtn: searchString = "double unders"
+        case _ where exerciseBtn == checkRowBtn: searchString = "row"
+        case _ where exerciseBtn == checkBikeBtn: searchString = "bike"
+        case _ where exerciseBtn == checkDeadliftBtn: searchString = "deadlift"
+            
+        default: searchString = ""
+        }
+        
+        self.FilteredWodList = self.FilteredWodList.filter({ (wod: HeroWOD) -> Bool in
+            
+            if let _=wod.exercise?.lowercased().range(of: searchString.lowercased()) {
+                return true
+            }
+            return false
+        })
+        self.tableView.reloadData()
+    }
+    
+    
     
     // Search Bar Function
     func updateSearchResults(for searchController: UISearchController) {
         Keyword = searchController.searchBar.text!
         self.filterByScope()
+        self.checkExercises()
         self.filterByName()
         self.tableView.reloadData()
     }
@@ -111,6 +180,7 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         Keyword = self.searchController?.searchBar.text ?? ""
         self.filterByScope()
+        self.checkExercises()
         self.tableView.reloadData()
     }
     
@@ -138,13 +208,13 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
         self.performSegue(withIdentifier: "showHeroDetail", sender: nil)
     }
     
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showHeroDetail" {
             let controller = segue.destination as? HeroWODDetailView
             if let indexPath = self.tableView.indexPathForSelectedRow
                 
             {
-                
                 
                 let wod = FilteredWodList[indexPath.row]
                 controller?.heroWODImage = wod.image ?? ""
@@ -153,10 +223,67 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
                 controller?.exerciseText = wod.exercise ?? ""
                 controller?.aboutText = wod.about ?? ""
             }
-            
-            
-            
-            
+
         }     
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        header.frame = CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: heightOfHeader)
+        header.backgroundColor = UIColor.purple
+        
+        let btn = UIButton(type: UIButtonType.custom) as UIButton
+        btn.frame = CGRect(x: header.frame.origin.x, y: header.frame.origin.y, width: header.frame.width, height: header.frame.height)
+        btn.addTarget(self, action: #selector(HeroWODViewController.addPopUpView), for: .touchUpInside)
+        btn.setTitle("Exercise Filters +", for: .normal)
+        btn.setTitleColor(UIColor.white, for: .normal)
+        btn.backgroundColor = UIColor.gray
+        btn.isUserInteractionEnabled = true
+        
+        header.addSubview(btn)
+
+        return header
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(heightOfHeader)
+    }
+    
+    
+    func addPopUpView() {
+        self.view.addSubview(popUpView)
+        popUpView.center = view.center
+        
+        popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        popUpView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.popUpView.alpha = 1
+            self.popUpView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func removePopUpView () {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.popUpView.alpha = 0
+            
+        }) { (success:Bool) in
+            self.popUpView.removeFromSuperview()
+        }
+    }
+    
+    func tappedCheckMark(btn: UIButton) {
+        let uncheckedBox = UIImage(named: "UncheckedBox.png")
+        let checkedBox = UIImage(named: "CheckedBox.png")
+        
+        if btn.currentImage == uncheckedBox {
+            btn.setImage(checkedBox, for: .normal)
+        }else if btn.currentImage == checkedBox {
+            btn.setImage(uncheckedBox, for: .normal)
+        }        
+    }
+    
+    
 }

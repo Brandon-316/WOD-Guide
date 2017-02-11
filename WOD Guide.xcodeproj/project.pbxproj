@@ -187,6 +187,9 @@
 		73FD8CF01C0B3AB800B46FFF /* HeroWODLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FD8CEF1C0B3AB800B46FFF /* HeroWODLibrary.swift */; };
 		73FD8CF21C0B3C0200B46FFF /* BenchmarkWODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FD8CF11C0B3C0200B46FFF /* BenchmarkWODViewController.swift */; };
 		73FD8CF41C0B3C1A00B46FFF /* HeroWODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FD8CF31C0B3C1A00B46FFF /* HeroWODViewController.swift */; };
+		84EF369C1E44E401004A6A13 /* HeroExerciseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF369B1E44E401004A6A13 /* HeroExerciseFilter.swift */; };
+		84EF369E1E4AD56D004A6A13 /* CheckedBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EF369D1E4AD56D004A6A13 /* CheckedBox.png */; };
+		84EF36A01E4AD574004A6A13 /* UncheckedBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EF369F1E4AD574004A6A13 /* UncheckedBox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +396,9 @@
 		73FD8CEF1C0B3AB800B46FFF /* HeroWODLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroWODLibrary.swift; sourceTree = "<group>"; };
 		73FD8CF11C0B3C0200B46FFF /* BenchmarkWODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenchmarkWODViewController.swift; sourceTree = "<group>"; };
 		73FD8CF31C0B3C1A00B46FFF /* HeroWODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroWODViewController.swift; sourceTree = "<group>"; };
+		84EF369B1E44E401004A6A13 /* HeroExerciseFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroExerciseFilter.swift; sourceTree = "<group>"; };
+		84EF369D1E4AD56D004A6A13 /* CheckedBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckedBox.png; sourceTree = "<group>"; };
+		84EF369F1E4AD574004A6A13 /* UncheckedBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedBox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,6 +626,8 @@
 				73FA74B71D5FF10D00F42E75 /* WODGuideLogo.png */,
 				73A1699D1C068EEB0014FC1B /* Info.plist */,
 				739AF96B1D47098A007CACDF /* Back Button.png */,
+				84EF369D1E4AD56D004A6A13 /* CheckedBox.png */,
+				84EF369F1E4AD574004A6A13 /* UncheckedBox.png */,
 				73FD8CF61C0B40C700B46FFF /* ViewControllers */,
 				73FD8CF51C0B408100B46FFF /* Libraries */,
 				73D309711C167FE20095BFDC /* BenchmarkWODDetail.swift */,
@@ -664,6 +672,7 @@
 				737ACBE91D22125000D3926B /* BenchmarkWODDetailView.swift */,
 				73FD8CF31C0B3C1A00B46FFF /* HeroWODViewController.swift */,
 				737ACBEB1D22126700D3926B /* HeroWODDetailView.swift */,
+				84EF369B1E44E401004A6A13 /* HeroExerciseFilter.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -873,6 +882,7 @@
 				738660741D54420500ADEA26 /* TOM.png in Resources */,
 				73865FF71D54420500ADEA26 /* BRIAN.png in Resources */,
 				73865FF21D54420500ADEA26 /* BOWEN.png in Resources */,
+				84EF369E1E4AD56D004A6A13 /* CheckedBox.png in Resources */,
 				738660491D54420500ADEA26 /* NATE.png in Resources */,
 				738660751D54420500ADEA26 /* TOMMY V.png in Resources */,
 				738660451D54420500ADEA26 /* MOORE.png in Resources */,
@@ -904,6 +914,7 @@
 				73865FFF1D54420500ADEA26 /* COE.png in Resources */,
 				7386606B1D54420500ADEA26 /* SMALL.png in Resources */,
 				7386603E1D54420500ADEA26 /* MATT16.png in Resources */,
+				84EF36A01E4AD574004A6A13 /* UncheckedBox.png in Resources */,
 				73865FEB1D54420500ADEA26 /* ALEXANDER.png in Resources */,
 				738660131D54420500ADEA26 /* GALLANT.jpg in Resources */,
 				738660591D54420500ADEA26 /* RICKY.png in Resources */,
@@ -974,6 +985,7 @@
 				737ACBEA1D22125000D3926B /* BenchmarkWODDetailView.swift in Sources */,
 				73B648731D6171C800D7A58E /* OtherWODLibrary.swift in Sources */,
 				73FD8CEE1C0B3AAB00B46FFF /* BenchmarkWODLibrary.swift in Sources */,
+				84EF369C1E44E401004A6A13 /* HeroExerciseFilter.swift in Sources */,
 				73FD8CF41C0B3C1A00B46FFF /* HeroWODViewController.swift in Sources */,
 				73D309721C167FE20095BFDC /* BenchmarkWODDetail.swift in Sources */,
 				73A169921C068EEB0014FC1B /* AppDelegate.swift in Sources */,

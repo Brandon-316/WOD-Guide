@@ -20,9 +20,6 @@ struct HeroWOD {
     
     init(dictionary: [String: String]) {
         
-        
-//        let imageName = dictionary["image"]! as String
-//        image = UIImage(named: imageName)
         image = dictionary["image"]
         name = dictionary["name"]
         exercise = dictionary["exercises"]

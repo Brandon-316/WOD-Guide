@@ -72,7 +72,7 @@ struct HeroWODs {
             "image": "NATE.png",
             "about": "In honor of Chief Petty Officer Nate Hardy, who was killed Sunday February 4th during combat operations in Iraq. \n\nNate is survived by his wife, Mindi, and his infant son Parker. ",
             "exercises": "2 Muscle-ups\n4 Handstand Push-ups\n8 2-Pood Kettlebell swings",
-            "description": "As many rounds as possible in 20 minutes"
+            "description": "AMRAP - As many rounds as possible in 20 minutes"
         ],
         [
             "name": "RANDY",
@@ -128,7 +128,7 @@ struct HeroWODs {
             "image": "DANNY.png",
             "about": "Oakland SWAT Sergeant Daniel Sakai, age 35, was killed on March 21, 2009 in the line of duty along with fellow officers Sergeant Ervin Romans, Sergeant Mark Dunakin, and Officer John Hege. \n\nDaniel is survived by wife Jenni and daughter Jojiye.\n\nFirst posted 16 April 2009",
             "exercises": "Rounds in 20 min of:\n\n24\" box jump, 30 reps\n115 pound push press, 20 reps\n30 pull-ups",
-            "description": "Rounds completed"
+            "description": "AMRAP"
         ],
         [
             "name": "HANSEN",
@@ -177,7 +177,7 @@ struct HeroWODs {
             "image": "MCGHEE.png",
             "about": "Corporal Ryan C. McGhee, 21, was killed in action on May 13, 2009 by small arms fire during combat in central Iraq. He served with 3rd Battalion, 75th Ranger Regiment of Fort Benning, GA. This was his fourth deployment, his first to Iraq. Ryan was engaged to Ashleigh Mitchell of Fredericksburg, VA. \n\nHe is survived by his father Steven McGhee of Myrtle Beach SC, his mother Sherrie Battle McGhee, and his brother Zachary. \n\nFirst posted 15 April 2010",
             "exercises": "275 pound Deadlift, 5 reps\n13 Push-ups\n9 Box jumps, 24 inch box",
-            "description": "Rounds in 30 min"
+            "description": "AMRAP - Rounds in 30 min"
         ],
         [
             "name": "PAUL",
@@ -233,7 +233,7 @@ struct HeroWODs {
             "image": "JOHNSON.png",
             "about": "1st Lt. Michael E. Johnson, 25, of the U.S. Marine Corps 7th Communications Battalion, 3rd Marine Headquarters Group, III Marine Expeditionary Force, headquartered in Okinawa, Japan, died September 8, 2009 while supporting combat operations in Kunar province, Afghanistan. \n\nHe is survived by his wife Durinda Johnson. \n\nFirst posted 9 Jul 2010",
             "exercises": "245 pound Deadlift, 9 reps\n8 Muscle-ups\n155 pound Squat clean, 9 reps",
-            "description": "Rounds in 20 Min"
+            "description": "AMRAP - Rounds in 20 Min"
         ],
         [
             "name": "ROY",
@@ -275,7 +275,7 @@ struct HeroWODs {
             "image":"JACK.png",
             "about":"Army Staff Sgt. Jack M. Martin III, 26, of Bethany, OK, assigned to the 3rd Battalion, 1st Special Forces Group, Fort Lewis, WA, died September 29th, 2009, in Jolo Island, Philippines, from the detonation of an improvised explosive device. \n\nMartin is survived by his wife Ashley Martin, his parents Jack and Cheryl Martin, and siblings Abe, Mandi, Amber and Abi. \n\nFirst posted 29 September 2010",
             "exercises":"115 lbs Push press, 10 reps\n10 KB Swings, 1.5 pood\n10 Box jumps, 24 inch box",
-            "description":"Max Rounds in 20 Min"
+            "description":"AMRAP - Max Rounds in 20 Min"
         ],
         [
             "name":"FORREST",
@@ -352,7 +352,7 @@ struct HeroWODs {
             "image":"LEDESMA.png",
             "about":"Narcotics Detective and Special Assignment Unit Operator Carlos Ledesma, 34, of the Chandler Police Department, Chandler, AZ, was shot and killed by drug dealers on July 28, 2010, during an undercover operation in Phoenix, AZ. \n\nHe is survived by his wife Sherry and sons Luciano and Elijo. \n\nFirst posted February 8 2011",
             "exercises":" Complete as many rounds as possible of:\n\n5 Parallette handstand push-ups\n10 Toes through rings\n20 lbs Medicine ball cleans, 15 reps",
-            "description":"in 20 Minutes"
+            "description":"AMRAP - Rounds in 20 Minutes"
         ],
         [
             "name":"WITTMAN",
@@ -394,7 +394,7 @@ struct HeroWODs {
             "image":"MOORE.png",
             "about":"Officer David S. Moore, 29, of the Indianapolis Metropolitan Police Department, died on January 26, 2011 from gunshot wounds suffered on January 23, 2011 when he stopped a stolen vehicle and the driver opened fire at him. \n\nHe is survived by his mother Jo Ann, father Spencer, and sister Carol Bongfeldt. \n\nFirst posted April 28 2011",
             "exercises":"15 ft Rope Climb, 1 ascent\nRun 400 meters\nMax rep Handstand push-ups",
-            "description":"Rounds in 20 min "
+            "description":"AMRAP - Rounds in 20 min "
         ],
         [
             "name":"WILMOT",
@@ -485,7 +485,7 @@ struct HeroWODs {
             "image":"SANTORA.jpg",
             "about":"US Army Sergeant Jason A. Santora, of Farmingville, NY, assigned to the 3rd Battalion, 75th Ranger Regiment, based out of Fort Benning, GA died in Logar province, Afghanistan on April 23, 2010, from wounds sustained during a firefight with insurgents. \n\nHe is survived by his parents Gary and Theresa, and sister Gina. \n\nFirst posted November 24 2011",
             "exercises":" Three rounds of: \n\n155 lbs Squat cleans, 1 minute\n20' Shuttle sprints (20' forward + 20' backwards = 1 rep), 1 minute\n245 lbs Deadlifts, 1 minute\nBurpees, 1 minute\n155 lbs Jerks, 1 minute\nRest 1 minute",
-            "description":"For Reps"
+            "description":"AMRAP - For Reps"
         ],
         [
             "name":"WOOD",
@@ -506,7 +506,7 @@ struct HeroWODs {
             "image":"RICKY.jpg",
             "about":"U.S. Army Sergeant William \"Ricky\" Rudd, 27, of Madisonville, KY, assigned to the 3rd Battalion, 75th Ranger Regiment, based in Fort Benning, GA, died on October 5, 2008, from wounds suffered from enemy small arms fire while on a combat patrol in Mosul, Iraq. \n\nHe is survived by his father William, stepmother Barbara Rudd, step brother Josh, mother Pamela Lam, and sister Elizabeth. \n\nFirst posted December 30 2011",
             "exercises":"10 Pull-ups\n75 lbs dumbbell Deadlift, 5 reps\n135 lbs Push-press, 8 reps",
-            "description":"Rounds in 20 Min"
+            "description":"AMRAP - Rounds in 20 Min"
         ],
         [
             "name":"DAE HAN",
@@ -765,7 +765,7 @@ struct HeroWODs {
             "image":"FALKEL.png",
             "about":"U.S. Army Staff Sergeant Chris Falkel, 22, of Highlands Ranch, CO, assigned to the 1st Battalion, 3rd Special Forces Group, based in Fort Bragg, NC, was killed on August 8, 2005 by enemy small-arms fire in Deh Afghan, Afghanistan. \n\n\nHe is survived by his parents, Jeff and Dianne Falkel. \n\nFirst posted August 20 2013",
             "exercises":"\n8 Handstand push-ups\n8 Box jump, 30 inch box\n15 foot Rope climb, 1 ascent",
-            "description":"Rounds in 25 Min"
+            "description":"AMRAP - Rounds in 25 Min"
         ],
         [
             "name":"DONNY",
@@ -800,7 +800,7 @@ struct HeroWODs {
             "image":"DRAGON.png",
             "about":"U.S. Army Captain Nicholas Rozanski, 36, of Dublin, OH, assigned to the 1st Battalion, 148th Infantry Regiment, 37th Infantry Brigade Combat Team, of the Ohio National Guard, based in Walbridge, OH, died on April 4, 2012, of wounds sustained during an enemy attack by a suicide vehicle borne improvised explosive device in Faryab province, Afghanistan. \n\n\nHe is survived by his wife Jennifer, daughters Emma and Anna, his mother Pamela Mitchell, his father Jan, and his brothers Keith and Alex. \n\nFirst posted October 05 2013",
             "exercises":"\nRun 5k\n4 minutes to find 4 rep max Deadlift\nRun 5k\n4 minutes to find 4 rep max Push jerk",
-            "description":"Post load and time."
+            "description":"For Load / For Time."
         ],
         [
             "name":"WALSH",
@@ -835,7 +835,7 @@ struct HeroWODs {
             "image":"DG.png",
             "about":"U.S. Air Force Major Walter David Gray, 38, of Conyers, GA, assigned to the 13th Air Support Operations Squadron, based in Fort Carson, CO, died on August 8, 2012 from injuries suffered during a suicide bomb attack in Kunar province, Afghanistan. \n\n\nHe is survived by his wife Heather, daughters Nyah and Ava, and son Garrett. \n\nFirst posted December 26, 2013",
             "exercises":"\n8 Toes to bar\n35 lbs Dumbbell thruster, 8 reps\n35 lbs Dumbbell walking lunge, 12 steps",
-            "description":"Rounds in 10 minutes."
+            "description":"AMRAP - Rounds in 10 minutes."
         ],
         [
             "name":"TK",
@@ -856,7 +856,7 @@ struct HeroWODs {
             "image":"NUKES.png",
             "about":"U.S. Marine Corps Capt. Matthew \"Nukes\" Manoukian, 29, of Los Altos Hills, CA, assigned to the 1st Marine Special Operations Battalion, based in Camp Pendleton, CA, died Aug. 10, 2012, in Sangin District, Afghanistan, after being shot by an Afghan policeman. \n\nHe is survived by his parents, Socrates Peter and Patricia Manoukian, and his brothers, Mike and Marty Manoukian. \n\nFirst posted April 15 2014",
             "exercises":"In 8 minutes.  No rest between rounds.\n\n1-mile run\n315-lb. deadlifts, max reps\nThen, 10 minutes to complete:\n1-mile run\n225-lb. power cleans, max reps\nThen, 12 minutes to complete:\n1-mile run\n135-lb. overhead squats, max reps",
-            "description":"Post run times and reps completed for each exercise. "
+            "description":"AMRAP - Post run times and reps completed for each exercise. "
         ],
         [
             "name":"ZEMBIEC",
@@ -884,7 +884,7 @@ struct HeroWODs {
             "image":"JBO.png",
             "about":"U.S. Army Staff Sgt. Jeremie \"JBo\" \"Bubba\" Border, 28, of Mesquite, TX, assigned to the 1st Battalion, 1st Special Forces Group (Airborne), based in Torii Station, Okinawa, Japan, died Sept. 1, 2012, in Batur Village, Afghanistan, from wounds suffered when enemy forces attacked his unit with small-arms fire. \n\n\nHe is survived by his parents, Mary Border and Robert Harris; sisters, DeLaynie Peek, Katie Border, Ashley Harris and Amanda Pereira; nephews, Robbie and Kayden Pereira; and brothers-in-law, Jason Peek and Roberto Pereira. \n\nFirst posted August 16 2014",
             "exercises":"\n115-lb. overhead squats, 9 reps\n1 legless rope climb, 15-foot rope, beginning from seated\n115-lb. bench presses, 12 reps",
-            "description":"Rounds completed in 28 min."
+            "description":"AMRAP - Rounds completed in 28 min."
         ],
         [
             "name":"KEVIN",
@@ -898,7 +898,7 @@ struct HeroWODs {
             "image":"ROCKET.png",
             "about":"Army Sgt. 1st Class Aaron \"Rocket\" Henderson, 33, of Houlton, Maine, assigned to the 2nd Battalion, 5th Special Forces Group (Airborne), died Oct. 2, 2012, at Bagram Air Base, Afghanistan, of wounds suffered from an improvised explosive device in Zombalay Village, Afghanistan. \n\n\nHenderson is survived by his mother, Christine; brothers, Bob, Corey and Sam; sisters-in-law, Leisa, Holly and Kiley; and nephews and nieces Kurtis, Kaitlyn, Davis, Dallas, Mia and Daniel. He is preceded in death by his father, Dallas. \n\nFirst posted September 6 2014",
             "exercises":"\n50-yard swim\n10 push-ups\n15 squats",
-            "description":"Rounds in 30 min."
+            "description":"AMRAP - Rounds in 30 min."
         ],
         [
             "name":"RILEY",
