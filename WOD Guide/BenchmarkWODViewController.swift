@@ -28,7 +28,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     @IBOutlet weak var checkPushUpBtn: UIButton!
     @IBOutlet weak var checkPullUpBtn: UIButton!
     @IBOutlet weak var checkRowBtn: UIButton!
-    @IBOutlet weak var checkBikeBtn: UIButton!
+    @IBOutlet weak var checkWallBallBtn: UIButton!
     @IBOutlet weak var checkDeadliftBtn: UIButton!
     
     @IBAction func checkMark(_ btn: UIButton) {
@@ -126,7 +126,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     //Filter By Exercise//
     func checkExercises() {
         let checkedBox = UIImage(named: "CheckedBox.png")
-        let exercises = [checkSquatBtn, checkRowBtn, checkRunBtn, checkBikeBtn, checkCleanBtn, checkSnatchBtn, checkKettlebell, checkPullUpBtn, checkDeadliftBtn, checkPushUpBtn]
+        let exercises = [checkSquatBtn, checkRowBtn, checkRunBtn, checkWallBallBtn, checkCleanBtn, checkSnatchBtn, checkKettlebell, checkPullUpBtn, checkDeadliftBtn, checkPushUpBtn]
         
         for exercise in exercises {
             if exercise?.currentImage == checkedBox {
@@ -147,7 +147,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
         case _ where exerciseBtn == checkPullUpBtn: searchString = "pull-up"
         case _ where exerciseBtn == checkPushUpBtn: searchString = "push-up"
         case _ where exerciseBtn == checkRowBtn: searchString = "row"
-        case _ where exerciseBtn == checkBikeBtn: searchString = "bike"
+        case _ where exerciseBtn == checkWallBallBtn: searchString = "wall"
         case _ where exerciseBtn == checkDeadliftBtn: searchString = "deadlift"
             
         default: searchString = ""
