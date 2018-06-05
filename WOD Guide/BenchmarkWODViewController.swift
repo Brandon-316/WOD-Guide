@@ -31,28 +31,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     @IBOutlet weak var checkWallBallBtn: UIButton!
     @IBOutlet weak var checkDeadliftBtn: UIButton!
     
-    @IBAction func checkMark(_ btn: UIButton) {
-        let uncheckedBox = UIImage(named: "UncheckedBox.png")
-        let checkedBox = UIImage(named: "CheckedBox.png")
-        
-        if btn.currentImage != checkedBox {
-            btn.setImage(checkedBox, for: .normal)
-        }else{
-            btn.setImage(uncheckedBox, for: .normal)
-        }
-        setFilteredWodList()
-        filterByScope()
-        self.tableView.reloadData()
-        checkExercises()
-    }
-    
-    @IBAction func backButton(sender: AnyObject) {
-    _ = self.navigationController?.popViewController(animated: true)
-    }
 
-    @IBAction func doneWtPopUpBtn(_ sender: Any) {
-        removePopUpView()
-    }
 
     
     
@@ -64,14 +43,21 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
             WodList.append(wod)
         }
         
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = UIColor.green
-        button.setTitle("Test Button", for: .normal)
-        
         // Search Bar
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.searchBar.autocapitalizationType = .none
-        self.tableView.tableHeaderView = self.searchController?.searchBar
+        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = self.searchController
+            self.navigationItem.hidesSearchBarWhenScrolling = false
+            
+        } else {
+            self.tableView.tableHeaderView = self.searchController?.searchBar
+        }
+//        self.tableView.tableHeaderView = self.searchController?.searchBar
+        
+        
+        
         self.searchController?.searchResultsUpdater = self
         self.Keyword = ""
         definesPresentationContext = true
@@ -111,7 +97,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     
     func filterByName(){
         self.FilteredWodList = self.FilteredWodList.filter({ (wod: WOD) -> Bool in
-            if self.Keyword.characters.count == 0 {
+            if self.Keyword.count == 0 {
                 return true
             }
             
@@ -211,10 +197,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
         if segue.identifier == "showBenchmarkDetail" {
             let controller = segue.destination as? BenchmarkWODDetailView
             if let indexPath = self.tableView.indexPathForSelectedRow
-                
             {
-                
-                
                 let wod = FilteredWodList[indexPath.row]
                 controller?.nameText = wod.name ?? ""
                 controller?.descriptionText = wod.description ?? ""
@@ -247,7 +230,7 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
     }
     
     
-    func addPopUpView() {
+    @objc func addPopUpView() {
         self.view.addSubview(popUpView)
         popUpView.center = view.center
         
@@ -279,5 +262,30 @@ class BenchmarkWODViewController: UITableViewController, UISearchResultsUpdating
         }else if btn.currentImage == checkedBox {
             btn.setImage(uncheckedBox, for: .normal)
         }
+    }
+    
+    
+    // MARK: Actions
+    @IBAction func checkMark(_ btn: UIButton) {
+        let uncheckedBox = UIImage(named: "UncheckedBox.png")
+        let checkedBox = UIImage(named: "CheckedBox.png")
+        
+        if btn.currentImage != checkedBox {
+            btn.setImage(checkedBox, for: .normal)
+        }else{
+            btn.setImage(uncheckedBox, for: .normal)
+        }
+        setFilteredWodList()
+        filterByScope()
+        self.tableView.reloadData()
+        checkExercises()
+    }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func doneWtPopUpBtn(_ sender: Any) {
+        removePopUpView()
     }
 }

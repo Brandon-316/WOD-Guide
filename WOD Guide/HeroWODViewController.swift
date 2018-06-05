@@ -64,14 +64,21 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
         }
         
 
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = UIColor.green
-        button.setTitle("Test Button", for: .normal)
 
         // Search Bar
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.searchBar.autocapitalizationType = .none
-        self.tableView.tableHeaderView = self.searchController?.searchBar
+        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = self.searchController
+            self.navigationItem.hidesSearchBarWhenScrolling = false
+            
+        } else {
+            self.tableView.tableHeaderView = self.searchController?.searchBar
+        }
+        //        self.tableView.tableHeaderView = self.searchController?.searchBar
+        
+        
         self.searchController?.searchResultsUpdater = self
         self.Keyword = ""
         definesPresentationContext = true
@@ -114,7 +121,7 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
     
     func filterByName(){
         self.FilteredWodList = self.FilteredWodList.filter({ (wod: HeroWOD) -> Bool in
-            if self.Keyword.characters.count == 0 {
+            if self.Keyword.count == 0 {
                 return true
             }
             
@@ -137,6 +144,7 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
                 }
             }
     }
+    
     
     func filterExercise(exerciseBtn: UIButton) {
         var searchString = ""
@@ -251,14 +259,14 @@ class HeroWODViewController: UITableViewController, UISearchResultsUpdating, UIS
     }
     
     
-    func addPopUpView() {
+    @objc func addPopUpView() {
         self.view.addSubview(popUpView)
         popUpView.center = view.center
         
         popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         popUpView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.3) {
             self.popUpView.alpha = 1
             self.popUpView.transform = CGAffineTransform.identity
         }
